@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>issui</title>
+    <div id="particles-js"></div>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all">
+    <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <img class="name-icon" src="item/name-icon.svg" alt="" width="80px">
+    <p class="name">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="" height="" xml:space="preserve">
+  <defs>
+    <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
+      <path fill="#000" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+    </pattern>
+
+    <text id="text" transform="translate(2,116)" font-family="Apple SD Gothic Neo" font-size="60">issui ikeda</text>
+
+    <mask id="text-mask">
+      <use x="0" y="0" xlink:href="#text" opacity="1" fill="#FFFFFF"/>
+    </mask>
+
+    <g id="eff">
+      <use x="0" y="0" xlink:href="#text" fill="#e6e6fa"/>
+
+  <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" x="-200" y="80" width="1200" height="120" opacity="0.9">
+    <animate attributeType="xml" attributeName="x" from="-300" to="0" repeatCount="indefinite" dur="2s"/>
+  </rect>
+   <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" x="-200" y="45" width="1200" height="120" opacity="0.2">
+    <animate attributeType="xml" attributeName="x" from="-400" to="0" repeatCount="indefinite" dur="3s"/>
+  </rect>
+  </rect>
+    </g>
+  </defs>
+      <use xlink:href="#eff" opacity="1" style="mix-blend-mode:color-burn"/>
+</svg>
+    </p>
+    <div class="circle-line load"></div>
+</header>
+<div class="skills">
+    <h1 class="section-title">skill</h1>
+    <div class="skill color-1">ライティング</div>
+    <div class="skill color-2">PHP(学習中)</div>
+    <div class="skill color-3">HTML,CSS</div>
+    <div class="skill color-4">Bootstrap</div>
+</div>
+<div class="products">
+    <h1 class="section-title">product</h1>
+    <div class="product one">
+        <img src="./item/product3.png" alt="">
+    </div>
+    <div class="product two">
+        <img src="./item/product3.png" alt="">
+    </div>
+    <div class="product three">
+        <img src="./item/product3.png" alt="">
+    </div>
+    <div class="product four">
+        <img src="./item/product3.png" alt="">
+    </div>
+    <div class="product five">
+        <img src="./item/product3.png" alt="">
+    </div>
+</div>
+
+
+<div id="content"></div>
+
+<div class="product-content one-content">
+    <p>ポートフォリオ管理用に作成したサイトです。
+        <br>主にHTML,CSSとjqueryを使用して作りました。
+    </p>
+</div>
+<div class="product-content two-content"><p>fjiwcre</p></div>
+<div class="product-content three-content"><p>cercr</p></div>
+<div class="product-content four-content"><p>cervsd</p></div>
+<div class="product-content five-content"><p>sderf</p></div>
+
+
+
+<div class="profile">
+    <h1 class="section-title">profile</h1>
+    <a href="https://twitter.com/issui_ikeda" target="_blank"><img src="item/icon.jpg" height="500" width="500"/></a>
+    <p><span>初めまして、池田逸水(@issui_ikeda)、N高等学校三期生です。</span>
+        <span>高校入学と同時期にマークアップ言語やプログラミング言語の学習を始めました。</span>
+        <span>主にHTML,CSS,Javascriptと偶にBootstrapを使ってサイトの構築をしています。</span>
+        <span>動画編集や画像加工、ライティングなどの技術も多少あります。</span>
+    </p>
+</div>
+<div class="contacts">
+    <h1 class="section-title">contact</h1>
+    <a href="https://github.com/issuijin" target="_blank"><i class="fab fa-github-alt contact"></i></a>
+    <a href="https://twitter.com/issui_ikeda" target="_blank"><i class="fab fa-twitter contact"></i></a>
+    <a href="mailto:issui.real@gmail.com"><i class="fas fa-envelope contact"></i></a>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function() {
+        $('#content , .product-content').hide();
+
+    });
+</script>
+
+
+<script>
+    $(function() {
+        $('.one').click(function(){
+            $('#content , .one-content').fadeIn();
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $('#content').click(function() {
+            $('#content , .one-content').fadeOut();
+        });
+
+    });
+</script>
+
+
+<script>
+    $(function() {
+        $('.two').click(function(){
+            $('#content , .two-content').fadeIn();
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $('#content').click(function() {
+            $('#content , .two-content').fadeOut();
+        });
+
+    });
+</script>
+
+<script>
+    $(function() {
+        $('.three').click(function(){
+            $('#content , .three-content').fadeIn();
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $('#content').click(function() {
+            $('#content , .three-content').fadeOut();
+        });
+
+    });
+</script>
+
+<script>
+    $(function() {
+        $('.four').click(function(){
+            $('#content , .four-content').fadeIn();
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $('#content').click(function() {
+            $('#content , .four-content').fadeOut();
+        });
+
+    });
+</script>
+
+<script>
+    $(function() {
+        $('.five').click(function(){
+            $('#content , .five-content').fadeIn();
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $('#content').click(function() {
+            $('#content , .five-content').fadeOut();
+        });
+
+    });
+</script>
+
+
+<script src="./screen-transition.js"></script>
+<script src="./particles.min.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
